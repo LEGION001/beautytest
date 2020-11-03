@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Beauty</name>
+		<description>Beauty Background</description>
+		<author>Omnibus</author>
+		<update version="0.0.5">
+			<file name="background-beauty.xml"  />
+		</update>
+	</info>
+			
+
+	<element name="Beauty" type="Beauty" source="Omnibus" id="ID_BACKGROUND_Beauty>">
+		<description>
+			<p>You have the kind of face that can launch a thousand ships. Everywhere you go you turn heads, whether you want to or noth, and it has always been easy for you to scrape by on your appearence alone. perhaps you worked a job where looking nice was the highest requirement, like selling clothing or attracting customers to a business; or perhaps you didn't work a profession at all, and were chosen to be a courtier, paramour, or trophy spouse of someone significant. And, perhaps you became an adventurer to get away from all that. </p>
+			<ul class="unstyled">
+				<li><strong>Skill Proficiencies:</strong> Persuasion, Performance</li>
+				<li><strong>Languages:</strong>Two of your choice</li>
+				<li><strong>Equipment:</strong> A set of fine clothes, a hand mirror, a token of affection from an admirer, a makup palette or shaving kit, and a purse containing 1gp</li>
+			</ul>
+			<h5>Uncommonly Stunning</h5>
+			<p>While some are naturally beautiful, others gain their beauty from another source. Work with your DM to determine the nature of your beauty, or roll on the table below.</p>
+			<table>
+				<thead>
+					<tr><td class="col-10">d10</td><td>Uncommonly Stunning </td></tr>
+				</thead>
+				<tr><td>1</td><td>I was given a divine blessing as a reward or tool to help me complete a quest.</td></tr>
+				<tr><td>2</td><td>I or my parents made a deal with a devil or other supernatural force.</td></tr>
+				<tr><td>3</td><td>A spirit granted a wish for me to be beautiful - but there was a twist.</td></tr>
+				<tr><td>4</td><td>My appearance was latered by a powerful spellcaster.</td></tr>
+				<tr><td>5</td><td>I am of average beauty, but I have exceptional talent with makeup.</td></tr>
+				<tr><td>6</td><td>Good genetics and dumb luck</td></tr>
+			</table>
+			<div element="ID_BACKGROUND_FEATURE_Enchanting Appearance" />
+			<h5>SUGGESTED CHARACTERISTICS</h5>
+			<p>Whether you revel in your own beauty or you are annoyed at the way others treat you, your appearance shapes the way you think and behave. </p>
+		</description>
+		<setters>
+			<set name="short">Persuasion, Performance, 2 Languages</set>
+		</setters>
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_PERSUASION" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_PERFORMANCE" />
+			<select type="Language" name="Language (Beauty)" number="2" supports="Standard||Exotic" />
+			<grant type="Background Feature" id="ID_BACKGROUND_FEATURE_ENCHANTING_APPEARANCE" requirements="!ID_INTERNAL_GRANT_OPTIONAL_BACKGROUND_FEATURE" />
+			
+			<select name="Entertainer Routines" type="List" optional="true">
+				<item id="1">I was given a divine blessing as a reward or tool to help me complete a quest.</item>
+				<item id="2">I or my parents made a deal with a devil or other supernatural force.</item>
+				<item id="3">A spirit granted a wish for me to be beautiful - but there was a twist.</item>
+				<item id="4">My appearance was latered by a powerful spellcaster.</item>
+				<item id="5">I am of average beauty, but I have exceptional talent with makeup.</item>
+				<item id="6">Good genetics and dumb luck</item>
+			</select>
+			<select name="Personality Trait" type="List" number="2">
+				<item id="1">I know a story relevant to almost every situation.</item>
+				<item id="2">Whenever I come to a new place, I collect local rumors and spread gossip.</item>
+				<item id="3">I’m a hopeless romantic, always searching for that “special someone.”</item>
+				<item id="4">Nobody stays angry at me or around me for long, since I can defuse any amount tension.</item>
+				<item id="5">I love a good insult, even one directed at me.</item>
+				<item id="6">I get bitter if I’m not the center of attention.</item>
+				<item id="7">I’ll settle for nothing less than perfection.</item>
+				<item id="8">I change my mood or my mind as quickly as I change key in a song.</item>
+			</select>
+			<select name="Ideal" type="List">
+				<item id="1">Beauty. When I perform, I make the world better than it was. (Good)</item>
+				<item id="2">Tradition. The stories, legends, and songs of the past must never be forgotten, for they teach us who we are. (Lawful)</item>
+				<item id="3">Creativity. The world is in need of new ideas and bold action. (Chaotic)</item>
+				<item id="4">Greed. I’m only in it for the money and fame. (Evil)</item>
+				<item id="5">People. I like seeing the smiles on people’s faces when I perform. That’s all that matters. (Neutral)</item>
+				<item id="6">Honesty. Art should reflect the soul; it should come from within and reveal who we really are. (Any)</item>
+			</select>
+			<select name="Bond" type="List">
+				<item id="1">My instrument is my most treasured possession, and it reminds me of someone I love.</item>
+				<item id="2">Someone stole my precious instrument, and someday I’ll get it back.</item>
+				<item id="3">I want to be famous, whatever it takes.</item>
+				<item id="4">I idolize a hero of the old tales and measure my deeds against that person’s.</item>
+				<item id="5">I will do anything to prove myself superior to my hated rival.</item>
+				<item id="6">I would do anything for the other members of my old troupe.</item>
+			</select>
+			<select name="Flaw" type="List">
+				<item id="1">I’ll do anything to win fame and renown.</item>
+				<item id="2">I’m a sucker for a pretty face.</item>
+				<item id="3">A scandal prevents me from ever going home again. That kind of trouble seems to follow me around.</item>
+				<item id="4">I once satirized a noble who still wants my head. It was a mistake that I will likely repeat.</item>
+				<item id="5">I have trouble keeping my true feelings hidden. My sharp tongue lands me in trouble.</item>
+				<item id="6">Despite my best efforts, I am unreliable to my friends.</item>
+			</select>
+		</rules>
+	</element>
+
+	<element name="Feature: Enchanting Apperance" type="Background Feature" source="Omnibus" id="ID_BACKGROUND_FEATURE_ENCHANTING_APPEARANCE">
+		<supports>Background Feature</supports>
+		<description>
+			<p>Your appearance causes people who aren't already aggressive or hostile towards you to treat you differently. They will be more willing to interact with you or give you special treatment, especially if they are inclined to be attracted to your gender.</p>
+		</description>
+		<sheet alt="Enchanting Appearance">
+			<description>Your appearance causes people who aren't already aggressive or hostile towards you to treat you differently. They will be more willing to interact with you or give you special treatment, especially if they are inclined to be attracted to your gender.</description>
+		</sheet>
+	</element>
+</elements>
