@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<index>
+  <info>
+    <update version="1.0">
+      <file name="legionhomebrew.index" url="https://github.com/LEGION001/beautytest/blob/legionhomebrew.index" />
+    </update>
+  </info>
+  <files>
+    <file name="background-beauty.xml" url="https://github.com/LEGION001/beautytest/blob/master/background-beauty.xml" />
+  </files>
+</index>
